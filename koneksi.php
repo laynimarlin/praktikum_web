@@ -1,8 +1,11 @@
 <?php
 $server = "localhost";
-$user = "root";
-$pass = "";
-$db = "pemesanan_hotel";
+$username = "root";
+$password = "";
+$database = "pemesanan_hotel";
 
-$con = mysqli_connect($server, $user, $pass, $db);
+$con = mysqli_connect($server, $username, $password, $database);
+if (!$con) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
 ?>
